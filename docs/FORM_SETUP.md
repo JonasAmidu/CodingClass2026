@@ -50,6 +50,19 @@ The same HTML form pattern can be changed to work with other providers:
 
 For providers that require different field names or hidden values, update the form inputs in `index.html` and retest the published site.
 
+## Google Forms Quick Setup
+
+To create a matching Google Form quickly:
+
+1. Open <https://script.google.com/>.
+2. Create a new Apps Script project.
+3. Paste the contents of `docs/create-google-form.gs`.
+4. Run `createCodingClassSignupForm`.
+5. Approve the Google permissions.
+6. Open **Executions** or **Logs** and copy the generated **Prefilled URL**.
+
+Send that prefilled URL back to the site maintainer. It contains the unique `entry.xxxxx` field IDs needed to connect this static page to the Google Form.
+
 ## Privacy Notes
 
 Before sharing the page publicly, add any privacy notice required for your location and audience. At minimum, tell visitors who is collecting the data, why it is collected, how long it will be kept, and how they can ask to be removed from the update list.
