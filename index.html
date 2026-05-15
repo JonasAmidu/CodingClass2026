@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Register interest for a practical coding class covering Visual Studio, Copilot, Codex, iOS, Android, web apps, and ESP32 live demos."
+    >
+    <meta property="og:title" content="Coding Class 2026">
+    <meta
+      property="og:description"
+      content="Join the interest list for a hands-on coding class covering apps, AI-assisted development, and ESP32 boards."
+    >
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/coding-class-hero.png">
+    <title>Coding Class 2026 | Register Interest</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="Coding Class 2026 home">
+        <span class="brand-mark" aria-hidden="true">CC</span>
+        <span>Coding Class 2026</span>
+      </a>
+      <nav class="nav-links" aria-label="Page sections">
+        <a href="#course">Course</a>
+        <a href="#details">Details</a>
+        <a href="#updates">Updates</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <img
+          class="hero-image"
+          src="assets/coding-class-hero.png"
+          width="1713"
+          height="918"
+          alt="Workshop desk with laptops, app screens, and an ESP32 development board"
+        >
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Hands-on app and hardware development</p>
+          <h1 id="hero-title">Build iOS, Android, web, and ESP32 projects with modern AI coding tools.</h1>
+          <p class="hero-copy">
+            Register your interest and we will let you know when dates, pricing, and seats are ready.
+          </p>
+          <a class="hero-action" href="#signup">Register interest</a>
+        </div>
+      </section>
+
+      <section id="course" class="content-band">
+        <div class="section-heading">
+          <p class="eyebrow">What the class covers</p>
+          <h2>A practical route into building real apps</h2>
+        </div>
+        <div class="feature-grid" aria-label="Course topics">
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">VS</span>
+            <h3>Developer setup</h3>
+            <p>Visual Studio, GitHub, Copilot, Codex, project workflow, and live coding habits.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">APP</span>
+            <h3>App development</h3>
+            <p>Build and iterate on iOS, Android, and web app experiences from one class path.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">ESP</span>
+            <h3>Hardware demos</h3>
+            <p>See live ESP32 board demonstrations with sensors, device logic, and connected workflows.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="details" class="split-section">
+        <div>
+          <p class="eyebrow">What to bring</p>
+          <h2>Bring your own laptop and be ready to participate.</h2>
+          <p>
+            The class is designed around live demonstration and guided practice. Students should bring a laptop
+            capable of running developer tools and should be willing to follow along during the demos.
+          </p>
+        </div>
+        <ul class="check-list" aria-label="Student requirements">
+          <li>Bring a Windows, macOS, or Linux laptop.</li>
+          <li>Have permission to install development tools.</li>
+          <li>Be willing to participate in live demos.</li>
+          <li>Join the interest list for course launch updates.</li>
+        </ul>
+      </section>
+
+      <section id="updates" class="signup-band" aria-labelledby="signup-title">
+        <div class="signup-copy">
+          <p class="eyebrow">Course updates</p>
+          <h2 id="signup-title">Get notified when the course is ready.</h2>
+          <p>
+            Share your details and we will use them only to send updates about this class, including launch dates,
+            availability, setup notes, and enrolment information.
+          </p>
+        </div>
+
+        <form
+          id="signup"
+          class="signup-form"
+          action="https://formsubmit.co/jonasamidu@gmail.com"
+          method="POST"
+          data-form-provider="formsubmit"
+        >
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="form-row">
+            <label for="phone">Phone <span>optional</span></label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel">
+          </div>
+          <div class="form-row">
+            <label for="experience">Coding experience</label>
+            <select id="experience" name="experience" required>
+              <option value="">Select one</option>
+              <option value="new">New to coding</option>
+              <option value="some">Some experience</option>
+              <option value="confident">Confident developer</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="interest">Main interest</label>
+            <select id="interest" name="interest" required>
+              <option value="">Select one</option>
+              <option value="mobile">iOS and Android apps</option>
+              <option value="web">Web apps</option>
+              <option value="esp32">ESP32 hardware</option>
+              <option value="ai-tools">Copilot and Codex workflow</option>
+              <option value="all">All of it</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="message">Anything we should know? <span>optional</span></label>
+            <textarea id="message" name="message" rows="4"></textarea>
+          </div>
+          <label class="consent">
+            <input type="checkbox" name="consent" value="yes" required>
+            <span>I agree to be contacted about Coding Class 2026 updates.</span>
+          </label>
+          <input type="hidden" name="source" value="github-pages-signup">
+          <input type="hidden" name="_subject" value="New Coding Class 2026 signup">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="_honey" class="hidden-field" tabindex="-1" autocomplete="off">
+          <button type="submit">Join the update list</button>
+          <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Coding Class 2026</p>
+      <a href="#signup">Register interest</a>
+    </footer>
+  </body>
+</html>
