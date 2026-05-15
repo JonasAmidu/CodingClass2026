@@ -2,27 +2,31 @@
 
 GitHub Pages serves static files only. It does not provide a database, email inbox, or backend route for form submissions. The signup page is prepared for a static form provider.
 
-## Current Provider: FormSubmit
+## Current Provider: Google Forms
 
-The page is currently wired to send submissions to:
+The page is currently wired to send submissions to this Google Form:
 
 ```text
-jonasamidu@gmail.com
+https://docs.google.com/forms/d/e/1FAIpQLSfBW6PbQ4bjX3fIwpBFON_7slNjkX-4NISdPamFdMulN8kinA/viewform
 ```
 
-via this endpoint in `index.html`:
+The form submits to this endpoint in `index.html`:
 
 ```html
-action="https://formsubmit.co/jonasamidu@gmail.com"
+action="https://docs.google.com/forms/d/e/1FAIpQLSfBW6PbQ4bjX3fIwpBFON_7slNjkX-4NISdPamFdMulN8kinA/formResponse"
 ```
 
-FormSubmit usually requires the destination email address to be confirmed after the first form submission. Publish the page, submit a test entry, then check `jonasamidu@gmail.com` for the activation email.
+Each site field uses the matching Google Forms `entry.xxxxx` name:
 
-The form also includes:
+- Name: `entry.1954248626`
+- Email: `entry.2145477866`
+- Phone: `entry.1790911027`
+- Coding experience: `entry.49111606`
+- Main interest: `entry.485069914`
+- Anything we should know?: `entry.1605881171`
+- Consent: `entry.1979101395`
 
-- `_subject` for a clearer email subject.
-- `_captcha=false` to avoid a captcha screen.
-- `_honey` as a hidden honeypot field for spam reduction.
+If the Google Form questions are deleted and recreated, Google may assign new `entry.xxxxx` IDs. Update `index.html` if that happens.
 
 ## Data Collected
 

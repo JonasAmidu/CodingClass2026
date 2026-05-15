@@ -7,6 +7,7 @@
   }
 
   const endpoint = form.getAttribute("action") || "";
+  const provider = form.dataset.formProvider || "";
   const endpointIsConfigured = endpoint && !endpoint.includes("YOUR_FORM_ID");
 
   function setStatus(message, type) {
@@ -37,16 +38,24 @@
     submitButton.textContent = "Sending...";
 
     try {
-      const response = await fetch(endpoint, {
-        method: "POST",
-        body: formData,
-        headers: {
-          Accept: "application/json"
-        }
-      });
+      if (provider === "google-forms") {
+        await fetch(endpoint, {
+          method: "POST",
+          body: formData,
+          mode: "no-cors"
+        });
+      } else {
+        const response = await fetch(endpoint, {
+          method: "POST",
+          body: formData,
+          headers: {
+            Accept: "application/json"
+          }
+        });
 
-      if (!response.ok) {
-        throw new Error("Signup request failed");
+        if (!response.ok) {
+          throw new Error("Signup request failed");
+        }
       }
 
       form.reset();
